@@ -18,7 +18,8 @@ const userStatus = {
     mainFunction(1000);
   };
   
-  var socket = io("ws://localhost:" + process.env.PORT);
+  var socket = io.connect(window.location.hostname);
+  
   socket.emit("userInformation", userStatus);
   
   
