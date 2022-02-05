@@ -17,9 +17,11 @@ const userStatus = {
   window.onload = (e) => {
     mainFunction(1000);
   };
-  
-  var socket = io.connect(window.location.hostname);
-  
+
+
+  var HOST = location.origin.replace(/^http/, 'ws')
+  var socket = io.connect(HOST);
+
   socket.emit("userInformation", userStatus);
   
   
