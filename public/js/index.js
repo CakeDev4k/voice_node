@@ -18,9 +18,7 @@ const userStatus = {
     mainFunction(1000);
   };
 
-
-  var HOST = location.origin.replace(/^http/, 'ws')
-  var socket = io.connect(HOST);
+  var socket = io.connect();
 
   socket.emit("userInformation", userStatus);
   

@@ -6,7 +6,7 @@ const io = require("socket.io")(http);
 
 //To holding users information 
 const socketsStatus = {};
-
+/* 
 app.configure('development', function() {
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
   });
@@ -18,7 +18,7 @@ app.configure('development', function() {
 io.configure(function () { 
     io.set("transports", ["xhr-polling"]); 
     io.set("polling duration", 10); 
-  });
+  }); */
 
 io.on("connection", function (socket) {
     const socketId = socket.id;
